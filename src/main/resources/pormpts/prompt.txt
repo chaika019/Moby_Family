@@ -1,0 +1,73 @@
+# TASK: Implement Real-Camera Receipt QR Scanner with Fallback Demo Presets
+
+Act as a Principal Frontend Engineer (React 18 + TypeScript + Tailwind CSS).
+Implement a full-featured Receipt QR Scanner modal inside the Child interface (`Moby Junior`), integrating with the existing backend endpoint `POST /api/v1/qr-payment/scan`.
+
+## 1. ARCHITECTURE & USER EXPERIENCE (HYBRID MODEL)
+We need a robust, failsafe solution for the live hackathon presentation:
+1. **Primary Mode (Real Scanning):** Uses the device's physical camera/webcam via `html5-qrcode` to scan a real QR code displayed on a phone or paper.
+2. **Demo Fallback Panel (Instant Testing):** Place convenient preset buttons directly below the camera viewport. If lighting is poor or camera permissions fail during the live pitch, the user can click a preset to instantly trigger the exact same payload.
+
+## 2. INSTALLATION & SETUP
+- Ensure `html5-qrcode` is added to `package.json` dependencies (or install via `npm i html5-qrcode`).
+- Create a dedicated modal component: `src/components/scanner/QrScannerModal.tsx` (or adapt existing modal structure).
+
+## 3. QR PAYLOAD FORMAT & PARSING LOGIC
+The scanner must parse the decoded string. Expect a JSON payload representing a store receipt:
+```json
+{
+  "merchant": "Супермаркет Соседи",
+  "mcc": "5411",
+  "amount": 52.00,
+  "items": [
+    {"name": "Чипсы Lay's", "price": 4.20},
+    {"name": "Кола 1L", "price": 2.80},
+    {"name": "Школьный рюкзак", "price": 45.00}
+  ]
+}
+
+DEMO PRESET BUTTONS (SAFETY FALLBACK)
+Under the video preview frame, render 3 styled quick-action chips/buttons:
+
+"Школьный буфет (4.50 BYN)"
+
+Payload: { merchant: "Школьный буфет", mcc: "5814", amount: 4.50, items: [{"name": "Обед комплексный", "price": 4.50}] }
+
+Expected Result: Successful instant payment, audio chime, balance deducted.
+
+"Супермаркет (52.00 BYN) — Тест SOS"
+
+Payload: { merchant: "Супермаркет Соседи", mcc: "5411", amount: 52.00, items: [{"name": "Продукты", "price": 7.00}, {"name": "Канцелярия", "price": 45.00}] }
+
+Expected Result: Child has 45.00 BYN balance. Triggers NEED_SOS_TOPUP (missing 7.00 BYN) and opens SOS request to Parent screen.
+
+"Игры / Донат (15.00 BYN) — Тест Блокировки"
+
+Payload: { merchant: "Игры и развлечения", mcc: "7994", amount: 15.00, items: [{"name": "Подписка", "price": 15.00}] }
+
+Expected Result: Blocked by MCC spending rule.
+
+5. UI/UX DETAILS
+Modal backdrop: dark translucent overlay (fixed inset-0 bg-black/80 z-50 flex items-center justify-center).
+
+Viewfinder: rounded rectangular frame with animated pulsing scan-line indicator or rounded corner borders (#qr-reader container).
+
+Smooth lifecycle handling: properly stop and clear the Html5QrcodeScanner instance on unmount or modal close to release camera hardware.
+
+After a successful scan or preset click:
+
+Close the scanner modal.
+
+Send POST /api/v1/qr-payment/scan.
+
+Update application state and trigger corresponding feedback (success animation, sound, or SOS modal).
+
+Implement clean TypeScript types, handle camera permission denial gracefully (show a prompt inviting the user to use the fallback presets), and ensure full compatibility with the existing demo state.
+
+
+---
+
+<ElicitationsGroup>
+  <Elicitation>Сгенерировать готовые SVG/PNG QR-коды для каждого из 3 демо-чеков</Elicitation>
+  <Elicitation>Написать готовый TypeScript-код для `QrScannerModal.tsx`</Elicitation>
+</ElicitationsGroup>
