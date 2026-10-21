@@ -1,0 +1,751 @@
+@keyframes sheet-in {
+  from {
+    transform: translateY(30px);
+    opacity: .5;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes toast-in {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: .3;
+    transform: scale(.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (min-width:1000px) and (min-height:1050px) {
+  .intro {
+    padding-top: 44px;
+    padding-bottom: 30px;
+  }
+  .phone {
+    height: 852px;
+  }
+}
+
+@media (max-width:960px) and (min-width:701px) {
+  .phones {
+    gap: 24px;
+  }
+  .device-column {
+    width: 360px;
+  }
+  .phone {
+    height: 800px;
+  }
+  .demo-toolbar,
+  .workspace-footer {
+    max-width: 744px;
+  }
+  .intro h1 {
+    font-size: 31px;
+  }
+  .desktop-nav {
+    display: none;
+  }
+  .device-label>span:last-child {
+    font-size: 8px;
+  }
+  .screen-scroll {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .chore-bottom {
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+  .chore-bottom .small-button {
+    margin-left: auto;
+  }
+  .hero-balance h2 {
+    font-size: 32px;
+  }
+  .mascot {
+    right: -19px;
+  }
+}
+
+@media (max-width:700px) {
+  :root {
+    background: #f7f9fd;
+  }
+  .workspace {
+    background: #f7f9fd;
+    min-height: 100dvh;
+  }
+  .desktop-header,
+  .intro,
+  .device-label,
+  .workspace-footer {
+    display: none;
+  }
+  .demo-toolbar {
+    margin: 0;
+    padding: 0 16px;
+    height: 34px;
+    background: #edf2fb;
+    font-size: 8px;
+  }
+  .demo-toolbar .toolbar-divider,
+  .mode-label .toolbar-divider+* {
+    display: none;
+  }
+  .mode-label {
+    font-size: 0;
+    gap: 5px;
+  }
+  .mode-label .pulse {
+    width: 5px;
+    height: 5px;
+  }
+  .mode-label:after {
+    content: 'Демо · тестовые деньги';
+    font-size: 8px;
+  }
+  .demo-toolbar button {
+    font-size: 8px;
+    min-height: 30px;
+  }
+  .demo-toolbar button svg {
+    width: 11px;
+  }
+  .mobile-role {
+    display: flex;
+    padding: 7px 17px;
+    gap: 5px;
+    border-bottom: 1px solid #e9eef6;
+    background: #f7f9fd;
+    height: 62px;
+    position: relative;
+    z-index: 2;
+  }
+  .mobile-role>button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    flex: 1;
+    min-height: 37px;
+    font-size: 11px;
+    color: #8c9ab2;
+    border-radius: 10px;
+    position: relative;
+  }
+  .mobile-role .selected {
+    background: white;
+    color: #3f71ca;
+    box-shadow: 0 2px 7px #243e6a0b;
+    border: 1px solid #e7edf7;
+  }
+  .mobile-role i {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #f1a26c;
+    position: absolute;
+    right: 16px;
+  }
+  .phones {
+    display: block;
+  }
+  .device-column {
+    display: none;
+    width: 100%;
+  }
+  .device-column.mobile-active {
+    display: block;
+  }
+  .phone {
+    width: 100%;
+    height: calc(100dvh - 96px);
+    border: 0;
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+    background: #f7f9fd;
+  }
+  .phone:before,
+  .phone:after {
+    display: none;
+  }
+  .phone-screen {
+    border-radius: 0;
+  }
+  .statusbar {
+    display: none;
+  }
+  .screen-scroll {
+    padding: 0 20px 21px;
+  }
+  .app-header {
+    padding: 15px 0 19px;
+  }
+  .greeting strong {
+    font-size: 18px;
+  }
+  .greeting small {
+    font-size: 10px;
+  }
+  .avatar {
+    width: 43px;
+    height: 43px;
+  }
+  .notification {
+    width: 42px;
+    height: 42px;
+  }
+  .junior-hero {
+    height: 232px;
+  }
+  .hero-balance {
+    padding: 26px 20px;
+  }
+  .hero-balance h2 {
+    font-size: 38px;
+  }
+  .mascot {
+    right: -5px;
+    top: 30px;
+    transform: scale(1.04);
+    transform-origin: bottom right;
+  }
+  .mascot-bubble {
+    font-size: 9px;
+    top: 17px;
+    right: 14px;
+  }
+  .hero-bottom {
+    font-size: 9px;
+    padding: 12px 15px;
+  }
+  .hero-bottom .coin-pill {
+    font-size: 10px;
+  }
+  .quick-actions {
+    gap: 8px;
+    margin-top: 13px;
+    margin-bottom: 25px;
+  }
+  .quick-action {
+    height: 80px;
+    font-size: 10px;
+    border-radius: 17px;
+  }
+  .section-title {
+    margin-top: 25px;
+    margin-bottom: 13px;
+  }
+  .section-title h2 {
+    font-size: 15px;
+  }
+  .text-button {
+    font-size: 10px;
+    min-height: 35px;
+  }
+  .dream-card {
+    padding: 15px 13px;
+  }
+  .dream-copy>strong {
+    font-size: 13px;
+  }
+  .dream-copy>small {
+    font-size: 8px;
+  }
+  .dream-copy>span {
+    font-size: 9px;
+  }
+  .lesson-banner {
+    min-height: 103px;
+  }
+  .lesson-banner strong {
+    font-size: 13px;
+  }
+  .lesson-banner small {
+    font-size: 8px;
+  }
+  .lesson-banner span>span {
+    font-size: 9px;
+  }
+  .chore-card {
+    padding: 13px;
+    gap: 14px;
+  }
+  .chore-card>strong {
+    font-size: 11px;
+  }
+  .chore-bottom b {
+    font-size: 10px;
+  }
+  .chore-bottom small {
+    font-size: 9px;
+  }
+  .small-button {
+    font-size: 9px;
+    min-height: 38px;
+    padding: 7px 8px;
+  }
+  .bottom-nav {
+    height: 65px;
+    padding-top: 3px;
+  }
+  .bottom-nav>button {
+    font-size: 9px;
+    gap: 5px;
+  }
+  .home-indicator {
+    height: max(10px,env(safe-area-inset-bottom));
+    min-height: 10px;
+  }
+  .home-indicator:after {
+    display: none;
+  }
+  .page-header {
+    padding-top: 21px;
+    padding-bottom: 25px;
+  }
+  .page-header h1 {
+    font-size: 26px;
+  }
+  .page-header small {
+    font-size: 8px;
+  }
+  .parent-balance-card h2 {
+    font-size: 39px;
+  }
+  .balance-label {
+    font-size: 12px;
+  }
+  .button {
+    font-size: 12px;
+    min-height: 48px;
+    border-radius: 12px;
+  }
+  .freeze-button {
+    font-size: 10px;
+  }
+  .monthly-progress>span {
+    font-size: 9px;
+  }
+  .monthly-progress strong {
+    font-size: 10px;
+  }
+  .monthly-progress button {
+    font-size: 9px;
+    min-height: 35px;
+  }
+  .parent-shortcuts>button {
+    font-size: 9px;
+    gap: 9px;
+  }
+  .parent-shortcuts .icon-box {
+    width: 52px;
+    height: 47px;
+  }
+  .family-selector strong {
+    font-size: 14px;
+  }
+  .family-selector small {
+    font-size: 9px;
+  }
+  .family-selector {
+    padding-bottom: 19px;
+  }
+  .cashback-banner small {
+    font-size: 8px;
+  }
+  .cashback-banner small:last-child {
+    font-size: 9px;
+  }
+  .row-copy>strong,
+  .transaction>b {
+    font-size: 11px;
+  }
+  .row-copy>small {
+    font-size: 9px;
+  }
+  .row {
+    min-height: 72px;
+    padding: 13px;
+  }
+  .row .row-copy strong {
+    font-size: 12px;
+  }
+  .row .row-copy small {
+    font-size: 9px;
+  }
+  .icon-box {
+    width: 40px;
+    height: 40px;
+  }
+  .security-intro h2 {
+    font-size: 22px;
+  }
+  .security-intro p {
+    font-size: 12px;
+  }
+  .tip strong {
+    font-size: 11px;
+  }
+  .tip small {
+    font-size: 10px;
+  }
+  .inline-note {
+    font-size: 9px;
+  }
+  .dream-hero h2 {
+    font-size: 22px;
+  }
+  .dream-hero p {
+    font-size: 11px;
+  }
+  .goal-numbers>span {
+    font-size: 10px;
+  }
+  .battle strong {
+    font-size: 12px;
+  }
+  .battle p {
+    font-size: 10px;
+  }
+  .lesson-node strong {
+    font-size: 13px;
+  }
+  .lesson-node small {
+    font-size: 8px;
+  }
+  .lesson-node {
+    min-height: 93px;
+  }
+  .toast {
+    top: 12px;
+    font-size: 12px;
+    left: 15px;
+    right: 15px;
+  }
+  .sheet {
+    padding: 9px 22px calc(24px + env(safe-area-inset-bottom));
+    max-height: 95%;
+    border-radius: 25px 25px 0 0;
+  }
+  .sheet>header h2 {
+    font-size: 21px;
+  }
+  .sheet-description {
+    font-size: 12px;
+  }
+  .form-note {
+    font-size: 10px;
+  }
+  .field {
+    font-size: 11px;
+  }
+  .field input {
+    min-height: 49px;
+  }
+  .qr-presets>button {
+    min-height: 82px;
+  }
+  .qr-presets strong {
+    font-size: 12px;
+  }
+  .qr-presets small {
+    font-size: 9px;
+  }
+  .qr-presets b {
+    font-size: 14px;
+  }
+  .preset-amounts button {
+    min-height: 44px;
+    font-size: 10px;
+  }
+  .result-screen p {
+    font-size: 12px;
+  }
+  .quiz p {
+    font-size: 12px;
+  }
+  .quiz-options button {
+    font-size: 11px;
+    min-height: 54px;
+  }
+  .quiz h4 {
+    font-size: 14px;
+  }
+  .profile-card p {
+    font-size: 11px;
+  }
+  .shop-card strong {
+    font-size: 13px;
+  }
+  .shop-card small {
+    font-size: 10px;
+  }
+  .split-item strong {
+    font-size: 12px;
+  }
+  .split-item small {
+    font-size: 10px;
+  }
+  .sos-banner strong {
+    font-size: 11px;
+  }
+  .sos-banner small {
+    font-size: 10px;
+  }
+  .sos-banner>.button {
+    font-size: 11px;
+  }
+  .sos-banner>.text-button {
+    min-height: 36px;
+  }
+  .help-copy p {
+    font-size: 11px;
+  }
+  .help-copy strong {
+    font-size: 12px;
+  }
+  .version-label {
+    font-size: 9px;
+  }
+  .capital-intro p {
+    font-size: 11px;
+  }
+}
+
+@media (max-width:374px) {
+  .screen-scroll {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .greeting strong {
+    font-size: 16px;
+  }
+  .greeting small {
+    font-size: 9px;
+  }
+  .hero-balance h2 {
+    font-size: 34px;
+  }
+  .hero-balance {
+    padding-left: 17px;
+  }
+  .mascot {
+    right: -19px;
+    transform: scale(.98);
+  }
+  .mascot-bubble {
+    right: 9px;
+    font-size: 8px;
+  }
+  .quick-action {
+    font-size: 9px;
+  }
+  .section-title h2 {
+    font-size: 14px;
+  }
+  .text-button {
+    font-size: 9px;
+  }
+  .chore-card {
+    padding: 11px;
+  }
+  .chore-bottom {
+    gap: 7px;
+    flex-wrap: wrap;
+  }
+  .chore-bottom .small-button {
+    margin-left: auto;
+  }
+  .chore-card>strong {
+    font-size: 10px;
+  }
+  .chore-bottom b {
+    font-size: 9px;
+  }
+  .hero-bottom {
+    font-size: 8px;
+  }
+  .lesson-banner {
+    gap: 8px;
+  }
+  .lesson-banner strong {
+    font-size: 12px;
+  }
+  .lesson-banner span>span {
+    font-size: 8px;
+  }
+  .row .row-copy strong {
+    font-size: 11px;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  *,
+  *:before,
+  *:after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (max-width:700px) {
+  .small-button,
+  .text-button,
+  .preset-amounts button {
+    min-height: 44px;
+  }
+  .icon-button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  .mobile-role>button {
+    min-height: 44px;
+  }
+  .toggle {
+    min-width: 44px;
+    width: 44px;
+  }
+  .toggle:before {
+    left: 4px;
+    right: 4px;
+  }
+  .toggle>span {
+    left: 6px;
+  }
+  .balance-label .icon-button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  .monthly-progress button {
+    min-height: 44px;
+  }
+  .sos-banner>.text-button {
+    min-height: 44px;
+  }
+}
+
+/* Secondary copy stays readable on white and tinted surfaces. */
+
+.row-copy>small,
+.form-note,
+.sheet-description,
+.quiz p,
+.help-copy p {
+  color: #7687a2;
+}
+
+.greeting small,
+.dream-copy>small,
+.dream-copy>span,
+.version-label {
+  color: #8090aa;
+}
+
+@media (max-width:700px) {
+  .section-title h2 {
+    font-size: 16px;
+  }
+  .text-button {
+    font-size: 11px;
+  }
+  .greeting small {
+    font-size: 11px;
+  }
+  .quick-action {
+    font-size: 11px;
+  }
+  .dream-copy>strong {
+    font-size: 14px;
+  }
+  .dream-copy>small {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+  .dream-copy>span {
+    font-size: 10px;
+  }
+  .chore-card>strong {
+    font-size: 12px;
+  }
+  .chore-bottom {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 9px;
+  }
+  .chore-bottom .small-button {
+    width: 100%;
+    font-size: 11px;
+  }
+  .chore-bottom b {
+    font-size: 11px;
+  }
+  .chore-bottom small {
+    font-size: 10px;
+  }
+  .status-chip {
+    font-size: 8px;
+  }
+  .row .row-copy small,
+  .row-copy>small {
+    font-size: 10px;
+  }
+  .form-note {
+    font-size: 11px;
+  }
+  .sheet-description {
+    font-size: 13px;
+  }
+  .quiz p {
+    font-size: 13px;
+  }
+  .tip small {
+    font-size: 11px;
+  }
+  .inline-note {
+    font-size: 10px;
+  }
+  .lesson-node small {
+    font-size: 10px;
+  }
+  .lesson-node small:first-child {
+    font-size: 8px;
+  }
+  .field {
+    font-size: 12px;
+  }
+  .row .row-copy strong {
+    font-size: 13px;
+  }
+  .balance-label {
+    font-size: 13px;
+  }
+  .bottom-nav>button {
+    font-size: 10px;
+  }
+  .help-copy p {
+    font-size: 12px;
+  }
+  .help-copy strong {
+    font-size: 13px;
+  }
+}

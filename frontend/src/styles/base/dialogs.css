@@ -1,0 +1,158 @@
+.sheet-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  background: #182c5277;
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: flex-end;
+}
+
+.sheet {
+  background: #fbfcff;
+  border-radius: 27px 27px 0 0;
+  width: 100%;
+  max-height: 91%;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 9px 21px 28px;
+  scrollbar-width: none;
+  box-shadow: 0 -4px 30px #182c5220;
+  animation: sheet-in .25s ease-out;
+}
+
+.sheet-handle {
+  width: 32px;
+  height: 4px;
+  border-radius: 10px;
+  background: #dce2ed;
+  margin: 0 auto 4px;
+}
+
+.sheet>header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 11px;
+}
+
+.sheet>header h2 {
+  font-size: 19px;
+  letter-spacing: -.6px;
+  font-weight: 700;
+}
+
+.sheet .close {
+  width: 35px;
+  height: 42px;
+  color: #a7b2c5;
+}
+
+.sheet-description {
+  font-size: 11px;
+  color: #8b9bb4;
+  line-height: 1.8;
+  margin: 10px 0 21px;
+}
+
+.sheet-art {
+  font-size: 62px;
+  text-align: center;
+  margin: 16px 0;
+  line-height: 1.3;
+}
+
+.sheet-art+.sheet-description {
+  text-align: center;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 10px;
+  color: #8191ad;
+  margin: 19px 0;
+}
+
+.field input {
+  border: 1px solid #e3e9f3;
+  border-radius: 12px;
+  background: #fff;
+  padding: 13px;
+  min-height: 47px;
+  font-size: 14px;
+  color: #2c4269;
+  width: 100%;
+  min-width: 0;
+}
+
+.field input::placeholder {
+  color: #b8c2d3;
+  font-size: 11px;
+}
+
+.money-input {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.money-input input {
+  font-size: 25px;
+  letter-spacing: -.7px;
+  font-weight: 650;
+  padding-right: 57px;
+}
+
+.money-input b {
+  position: absolute;
+  right: 15px;
+  font-size: 12px;
+  color: #9ca9c0;
+  font-weight: 500;
+}
+
+.form-note {
+  font-size: 9px;
+  color: #a3aec1;
+  line-height: 1.8;
+  margin: 17px 0;
+}
+
+.recipient {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f0f4fc;
+  border-radius: 14px;
+  padding: 13px;
+}
+
+.recipient strong {
+  font-size: 11px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.recipient small {
+  font-size: 9px;
+  color: #92a1b9;
+  display: block;
+}
+
+.preset-amounts {
+  display: flex;
+  gap: 7px;
+  margin-top: -8px;
+}
+
+.preset-amounts button {
+  background: #edf3ff;
+  border: 1px solid #e2eafb;
+  color: #7b95c3;
+  border-radius: 8px;
+  min-height: 35px;
+  font-size: 9px;
+  flex: 1;
+}

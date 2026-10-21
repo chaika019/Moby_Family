@@ -1,0 +1,232 @@
+.junior .phone-screen.view-academy,
+.junior .phone-screen.view-academy .home-indicator {
+  background: #082570;
+}
+
+.junior .screen-scroll.view-academy {
+  background: radial-gradient(ellipse at 80% 24%,
+    #9d60e4a0,
+    transparent 30%),
+    radial-gradient(ellipse at 5% 57%,
+    #409fff88,
+    transparent 42%),
+    linear-gradient(#0031a0,
+    #10287b 55%,
+    #171c58);
+}
+
+.junior .view-academy .page-header {
+  background: transparent;
+}
+
+.junior .view-academy .section-title h2 {
+  color: white;
+}
+
+.academy-hero {
+  background: none;
+  margin: 0 -18px;
+  border-radius: 0 0 30px 30px;
+  padding: 5px 23px 20px;
+  border-bottom: 1px solid #83b1ff40;
+  box-shadow: 0 12px 25px #15104d1a;
+  isolation: isolate;
+}
+
+.academy-hero > div:first-child {
+  position: relative;
+  z-index: 4;
+}
+
+.academy-hero .eyebrow {
+  color: #a9cdff;
+  font-size: 7px;
+}
+
+.academy-hero h2 {
+  color: white;
+  font-size: 26px;
+  margin: 11px 0;
+  max-width: 190px;
+}
+
+.academy-hero p {
+  color: #c8ddff;
+  font-size: 10px;
+}
+
+.academy-art.mascot {
+  transform: none;
+  top: 28px;
+  right: -22px;
+  width: 205px;
+  height: 208px;
+  background-size: 336px auto;
+  background-position: -106px -129px;
+  filter: none;
+  z-index: 1;
+}
+
+.academy-progress {
+  position: relative;
+  z-index: 3;
+  background: linear-gradient(110deg, #4c80d552, #ffffff13);
+  border-color: #b1ceff24;
+  max-width: 245px;
+  padding: 13px;
+  gap: 9px;
+  margin-top: 22px;
+  backdrop-filter: blur(8px);
+}
+
+.academy-progress > strong {
+  font-size: 15px;
+}
+
+.academy-progress > strong small,
+.academy-progress > small {
+  color: #d9e7ff;
+}
+
+.academy-progress .progress {
+  background: #a4b6f0;
+  height: 8px;
+}
+
+.academy-progress .progress > span {
+  background: #00bcff;
+}
+
+.learning-path {
+  min-height: 705px;
+  gap: 24px;
+  padding: 18px 0 35px;
+}
+
+.learning-path::before {
+  left: 50%;
+  width: 63%;
+  top: 20px;
+  bottom: 40px;
+  transform: translateX(-50%) rotate(8deg);
+  border: 3px dashed #a5eaff;
+  border-radius: 45%;
+  filter: drop-shadow(0 0 6px #40e2ff);
+  opacity: .65;
+}
+
+.lesson-node {
+  width: 84%;
+  min-height: 105px;
+  background: #dfe7ffd6;
+  border: 1px solid #ffffff94;
+  border-radius: 21px;
+  padding: 14px 12px;
+  box-shadow: 0 15px 24px #030f542e;
+  backdrop-filter: blur(10px);
+  z-index: 1;
+  overflow: visible;
+}
+
+.lesson-node:nth-child(even) {
+  align-self: flex-end;
+}
+
+.lesson-node > span:nth-child(3) {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.lesson-node > span:nth-child(2) {
+  flex: none;
+}
+
+.lesson-node > span:nth-child(3) > small {
+  color: #405b91;
+  font-size: 8px;
+}
+
+.lesson-node > span:nth-child(3) > small:first-child {
+  font-size: 7px;
+  letter-spacing: .8px;
+  font-weight: 700;
+}
+
+.lesson-node strong {
+  color: #15274d;
+  font-size: 13px;
+}
+
+.lesson-number {
+  position: relative;
+  z-index: 3;
+  width: 43px;
+  height: 43px;
+  border: 2px solid #ffffffad;
+  box-shadow: 0 0 0 5px #80bfff30;
+  background: #adbce2;
+  border-radius: 14px;
+}
+
+.island-platform {
+  position: absolute;
+  width: 102px;
+  height: 32px;
+  left: 3px;
+  bottom: -16px;
+  background: linear-gradient(#8ddfcc, #62a8b7 36%, #334da0 40%, #131d61);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px #8ad5fb2e, 0 12px 24px #0010494a;
+  z-index: -1;
+}
+
+.lesson-node.current {
+  background: #edf6fff2;
+  border-color: #9aeaff;
+  box-shadow: 0 0 20px #43caff66, 0 17px 28px #0b174f44;
+}
+
+.lesson-node.current .lesson-number {
+  background: #0055ff;
+  box-shadow: 0 0 0 5px #45c5ff44, 0 0 20px #4acaff;
+}
+
+.lesson-node.current strong {
+  color: #0050df;
+}
+
+.lesson-node.current .island-platform {
+  box-shadow: 0 0 7px 3px #31e4ff, 0 13px 20px #00449e;
+}
+
+.lesson-node.done {
+  background: #e7fff2ed;
+}
+
+.lesson-node.done .lesson-number {
+  color: white;
+  background: #09b976;
+}
+
+.lesson-node.done strong {
+  color: #1b634b;
+}
+
+.lesson-node.locked {
+  opacity: .66;
+}
+
+.junior .view-academy .tip {
+  background: #ffffffed;
+  border: 0;
+}
+
+.junior .view-academy .button.secondary {
+  background: white;
+  color: #0055ff;
+}

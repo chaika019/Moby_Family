@@ -1,0 +1,138 @@
+.tip {
+  background: #e4eeff;
+  border-color: #d7e5ff;
+  color: #425e92;
+}
+
+.tip strong {
+  color: #214583;
+  font-size: 11px;
+}
+
+.tip small {
+  color: #51698f;
+  font-size: 10px;
+}
+
+.tip > svg {
+  color: #0055ff;
+}
+
+.button {
+  background: #0055ff;
+  min-height: 44px;
+  box-shadow: 0 5px 11px #0055ff17;
+}
+
+.button:hover:not(:disabled) {
+  background: #0046d7;
+}
+
+.button.secondary {
+  background: #e4edff;
+  color: #004bde;
+}
+
+.sheet {
+  background: #f5f7fc;
+  border-radius: 27px 27px 0 0;
+}
+
+.sheet > header h2 {
+  color: #11162b;
+  font-size: 21px;
+}
+
+.sheet-description,
+.form-note,
+.quiz p,
+.help-copy p {
+  color: #5b6c8a;
+}
+
+.sheet-description {
+  font-size: 12px;
+}
+
+.field {
+  color: #455d83;
+  font-size: 12px;
+}
+
+.field input {
+  border-color: #dbe3f0;
+  color: #111a32;
+}
+
+.money-input b {
+  color: #53698a;
+}
+
+.qr-camera {
+  background: radial-gradient(at 50% 80%, #0069ff, transparent), #00297c;
+}
+
+.qr-presets strong {
+  font-size: 12px;
+  color: #10162d;
+}
+
+.qr-presets small {
+  color: #617494;
+}
+
+.virtual-card {
+  background: radial-gradient(at 95% 0,
+    #ed295f,
+    transparent 45%),
+    linear-gradient(135deg,
+    #00297c,
+    #0055ff 70%,
+    #c6338f);
+}
+
+.coin-pill,
+.shop-wallet {
+  color: #875400;
+}
+
+.dream-hero {
+  background: linear-gradient(135deg, #fffaf2, #ffe5d4);
+  border-color: #ffd3b4;
+}
+
+.dream-hero > .button {
+  background: #ff7832;
+}
+
+.sos-banner {
+  border-color: #ffc7af;
+  background: #fff0e9;
+}
+
+.sos-banner > .button {
+  background: #ed5b2c;
+}
+
+.sos-banner strong {
+  color: #9f361b;
+}
+
+.sos-banner small,
+.sos-banner > .text-button {
+  color: #96503a;
+}
+
+.toast {
+  color: #006943;
+  background: #edfff5;
+}
+
+.toast.error {
+  color: #7e4618;
+  background: #fff4e3;
+}
+
+.inline-note {
+  color: #5f7190;
+}

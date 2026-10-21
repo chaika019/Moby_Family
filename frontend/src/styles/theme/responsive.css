@@ -1,0 +1,292 @@
+@media (max-width: 960px) and (min-width: 701px) {
+  .hero-balance h2 {
+    font-size: 36px;
+  }
+  .mascot-bubble {
+    font-size: 9px;
+    right: 10px;
+    max-width: 122px;
+  }
+  .story-copy h2 {
+    font-size: 21px;
+  }
+  .parent-story .mascot {
+    right: -21px;
+  }
+  .parent-balance-card h2 {
+    font-size: 28px;
+  }
+  .monthly-progress strong {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 700px) {
+  .workspace {
+    background: #f2f5f9;
+  }
+  .demo-toolbar {
+    background: #00205f;
+    color: #d1dfff;
+  }
+  .demo-toolbar button {
+    color: #d1dfff;
+  }
+  .mobile-role {
+    background: #00297c;
+    border-color: #ffffff15;
+  }
+  .mobile-role > button {
+    color: #bfd3ff;
+  }
+  .mobile-role > button.selected {
+    background: #ffffff;
+    border-color: white;
+    color: #0055ff;
+  }
+  .mobile-role i {
+    background: #ff4d6b;
+  }
+  .phone {
+    background: #f2f5f9;
+  }
+  .screen-scroll {
+    padding: 0 18px 26px;
+  }
+  .app-header {
+    padding: 17px 3px 14px;
+  }
+  .app-header .greeting strong {
+    font-size: 19px;
+  }
+  .app-header .greeting small {
+    font-size: 11px;
+  }
+  .junior-hero {
+    height: 294px;
+  }
+  .hero-balance h2 {
+    font-size: 42px;
+  }
+  .hero-balance h2 small {
+    font-size: 18px;
+  }
+  .hero-balance > span {
+    font-size: 13px;
+  }
+  .hero-balance {
+    padding-top: 9px;
+  }
+  .mascot {
+    transform: none;
+  }
+  .quick-action,
+  .quick-action.primary {
+    height: 92px;
+  }
+  .quick-action span,
+  .quick-action.primary span {
+    font-size: 11px;
+  }
+  .quick-actions {
+    margin-top: -19px;
+  }
+  .section-title h2 {
+    font-size: 17px;
+  }
+  .mission-card {
+    min-height: 141px;
+  }
+  .mission-card > strong {
+    font-size: 11px;
+  }
+  .mission-card > span {
+    font-size: 12px;
+  }
+  .dream-copy > strong {
+    font-size: 15px;
+  }
+  .dream-copy > small,
+  .dream-copy > span {
+    font-size: 11px;
+  }
+  .chore-card > strong {
+    font-size: 13px;
+  }
+  .chore-bottom .small-button {
+    min-height: 44px;
+    font-size: 11px;
+  }
+  .parent-story {
+    height: 243px;
+  }
+  .story-copy h2 {
+    font-size: 25px;
+  }
+  .story-copy p {
+    font-size: 12px;
+  }
+  .parent-story .family-selector .icon-button {
+    min-width: 30px;
+    min-height: 32px;
+  }
+  .parent-story .family-selector {
+    min-height: 44px;
+  }
+  .parent-bubble {
+    bottom: 58px;
+    font-size: 10px;
+    width: 132px;
+  }
+  .parent-bubble small {
+    font-size: 9px;
+  }
+  .parent-story .mascot {
+    top: 44px;
+    height: 218px;
+    width: 224px;
+  }
+  .parent-balance-card {
+    padding: 15px;
+    gap: 0 11px;
+  }
+  .parent-balance-card h2 {
+    font-size: 33px;
+  }
+  .balance-label {
+    font-size: 12px;
+  }
+  .balance-label .icon-button {
+    min-width: 24px;
+    min-height: 24px;
+  }
+  .balance-actions .button {
+    min-height: 44px;
+    font-size: 11px;
+  }
+  .freeze-button {
+    min-width: 36px;
+    min-height: 44px;
+  }
+  .monthly-progress {
+    min-height: 148px;
+  }
+  .monthly-progress > span {
+    font-size: 10px;
+  }
+  .monthly-progress strong {
+    font-size: 15px;
+  }
+  .monthly-progress strong small {
+    font-size: 9px;
+  }
+  .monthly-progress button {
+    font-size: 9px;
+    min-height: 44px;
+  }
+  .parent-shortcuts > button {
+    min-height: 86px;
+    font-size: 10px;
+  }
+  .row .row-copy strong {
+    font-size: 13px;
+  }
+  .row .row-copy small {
+    font-size: 11px;
+  }
+  .security-intro h2 {
+    font-size: 25px;
+  }
+  .security-intro p {
+    font-size: 12px;
+  }
+  .security-intro .mascot {
+    top: 5px;
+  }
+  .bottom-nav {
+    height: 70px;
+    margin: 0 9px 0;
+    border-radius: 25px;
+  }
+  .bottom-nav > button {
+    font-size: 11px;
+  }
+  .home-indicator {
+    height: max(12px, env(safe-area-inset-bottom));
+  }
+  .home-indicator::after {
+    display: none;
+  }
+  .page-header h1 {
+    font-size: 29px;
+  }
+  .lesson-node > span:nth-child(3) > small {
+    font-size: 10px;
+  }
+  .lesson-node > span:nth-child(3) > small:first-child {
+    font-size: 8px;
+  }
+  .lesson-node strong {
+    font-size: 14px;
+  }
+  .academy-hero h2 {
+    font-size: 28px;
+  }
+  .tip small,
+  .form-note {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 374px) {
+  .hero-balance h2 {
+    font-size: 38px;
+  }
+  .mascot-bubble {
+    max-width: 121px;
+    font-size: 9px;
+    right: 10px;
+  }
+  .mascot {
+    right: -23px;
+  }
+  .mission-card {
+    padding: 12px 8px 10px;
+  }
+  .mission-card > strong {
+    font-size: 10px;
+  }
+  .section-title h2 {
+    font-size: 16px;
+  }
+  .story-copy h2 {
+    font-size: 22px;
+  }
+  .story-copy p {
+    font-size: 11px;
+  }
+  .parent-story .mascot {
+    right: -28px;
+  }
+  .parent-balance-card h2 {
+    font-size: 30px;
+  }
+  .parent-balance-card {
+    padding: 13px;
+    column-gap: 8px;
+  }
+  .monthly-progress {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .monthly-progress strong {
+    font-size: 13px;
+  }
+  .monthly-progress strong small {
+    font-size: 8px;
+  }
+  .parent-bubble {
+    right: 6px;
+    width: 122px;
+  }
+}

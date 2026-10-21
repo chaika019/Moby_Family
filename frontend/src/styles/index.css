@@ -1,0 +1,31 @@
+/* Keep the base layer before the reference theme; order preserves the cascade. */
+@import './base/reset.css';
+@import './base/workspace.css';
+@import './base/phone.css';
+@import './base/home.css';
+@import './base/cards.css';
+@import './base/parent.css';
+@import './base/navigation.css';
+@import './base/controls.css';
+@import './base/goals.css';
+@import './base/academy.css';
+@import './base/feedback.css';
+@import './base/dialogs.css';
+@import './base/payments.css';
+@import './base/services.css';
+@import './base/responsive.css';
+@import './theme/tokens-and-layout.css';
+@import './theme/junior-home.css';
+@import './theme/cards-and-missions.css';
+@import './theme/parent-home.css';
+@import './theme/safety-and-navigation.css';
+@import './theme/academy.css';
+@import './theme/forms.css';
+@import './theme/responsive.css';
+@import './theme/illustrations.css';
+
+@import './connection.css';
+
+@import './theme/readability.css';
+
+@import './theme/qr-scanner.css';

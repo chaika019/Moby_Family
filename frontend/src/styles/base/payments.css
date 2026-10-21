@@ -1,0 +1,156 @@
+.qr-camera {
+  height: 172px;
+  background: linear-gradient(130deg,#1b3769,#23569d);
+  border-radius: 18px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #b4d1ff;
+  gap: 11px;
+}
+
+.qr-camera:before,
+.qr-camera:after {
+  content: "";
+  position: absolute;
+  width: 27px;
+  height: 27px;
+  border: 2px solid #a6c6ff;
+  left: 85px;
+  top: 28px;
+  border-right: 0;
+  border-bottom: 0;
+  border-radius: 7px 0 0 0;
+}
+
+.qr-camera:after {
+  left: auto;
+  right: 85px;
+  top: 88px;
+  transform: rotate(180deg);
+}
+
+.qr-camera p {
+  font-size: 10px;
+}
+
+.qr-camera small {
+  font-size: 8px;
+  color: #819fc6;
+}
+
+.qr-presets {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.qr-presets>button {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: white;
+  border: 1px solid #e8edf6;
+  border-radius: 14px;
+  padding: 13px 10px;
+  min-height: 76px;
+  text-align: left;
+}
+
+.preset-emoji {
+  font-size: 24px;
+  flex-shrink: 0;
+  width: 30px;
+}
+
+.qr-presets>button>span:nth-child(2) {
+  flex: 1;
+  min-width: 0;
+}
+
+.qr-presets strong {
+  display: block;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.qr-presets small {
+  display: block;
+  font-size: 8px;
+  color: #9dabc1;
+  margin-top: 5px;
+  line-height: 1.4;
+}
+
+.qr-presets b {
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.qr-presets b>small {
+  text-align: right;
+  font-size: 8px;
+}
+
+.qr-presets>button>svg {
+  color: #bac5d5;
+}
+
+.result-screen {
+  text-align: center;
+  padding: 14px 0 4px;
+}
+
+.success-circle {
+  width: 83px;
+  height: 83px;
+  display: grid;
+  place-items: center;
+  background: #e4f6ed;
+  color: #42ae80;
+  border: 6px solid #f0fbf5;
+  border-radius: 50%;
+  margin: 20px auto;
+}
+
+.result-screen h3 {
+  font-size: 23px;
+  letter-spacing: -.7px;
+  margin: 19px 0 13px;
+}
+
+.result-screen p {
+  font-size: 11px;
+  color: #8a9bb6;
+  line-height: 1.9;
+  margin-bottom: 25px;
+}
+
+.result-screen>.button {
+  margin-top: 16px;
+}
+
+.waiting-dots {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin: 20px;
+}
+
+.waiting-dots i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #90aaf1;
+  animation: pulse-dot 1.2s infinite;
+}
+
+.waiting-dots i:nth-child(2) {
+  animation-delay: .2s;
+}
+
+.waiting-dots i:nth-child(3) {
+  animation-delay: .4s;
+}

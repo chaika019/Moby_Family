@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 backend_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-frontend_dir="${FRONTEND_DIR:-$backend_dir/../Moby_My_Family}"
+frontend_dir="${FRONTEND_DIR:-$backend_dir/frontend}"
 if [[ ! -f "$frontend_dir/package.json" ]]; then
   echo "Frontend not found at $frontend_dir. Set FRONTEND_DIR." >&2
   exit 1

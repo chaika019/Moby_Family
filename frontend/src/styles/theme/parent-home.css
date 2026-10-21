@@ -1,0 +1,284 @@
+.parent-story {
+  height: 228px;
+  position: relative;
+  margin: 0 -18px;
+  isolation: isolate;
+  color: white;
+}
+
+.parent-story::before {
+  bottom: 3px;
+  height: 85px;
+  left: -90px;
+  transform: rotate(-18deg);
+}
+
+.story-copy {
+  position: relative;
+  z-index: 4;
+  padding: 18px 23px 0;
+  max-width: 205px;
+}
+
+.story-copy .eyebrow {
+  font-size: 8px;
+  color: #afccff;
+  letter-spacing: 1.3px;
+}
+
+.story-copy h2 {
+  color: white;
+  font-size: 23px;
+  letter-spacing: -.6px;
+  font-weight: 750;
+  line-height: 1.15;
+  margin: 10px 0;
+}
+
+.story-copy p {
+  color: #d2e2ff;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.parent-story .mascot {
+  width: 215px;
+  height: 211px;
+  right: -7px;
+  top: 35px;
+  background-size: 350px auto;
+  background-position: -110px -132px;
+}
+
+.parent-story .family-selector {
+  position: absolute;
+  z-index: 5;
+  top: 3px;
+  right: 15px;
+  border-radius: 30px;
+  padding: 5px 5px 5px 7px;
+  background: #f3f7fff5;
+  gap: 5px;
+  box-shadow: 0 4px 15px #00184912;
+}
+
+.parent-story .child-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 13px;
+  background: #dee7ff;
+}
+
+.parent-story .child-avatar > span {
+  display: none;
+}
+
+.parent-story .family-selector strong {
+  font-size: 11px;
+  color: #11182f;
+  gap: 5px;
+}
+
+.parent-story .family-selector strong > span {
+  color: #596b8b;
+  background: none;
+  padding: 0;
+  font-size: 9px;
+}
+
+.parent-story .family-selector small {
+  display: none;
+}
+
+.parent-story .family-selector .icon-button {
+  width: 28px;
+  height: 32px;
+  color: #0055ff;
+}
+
+.parent-bubble {
+  position: absolute;
+  z-index: 5;
+  right: 9px;
+  bottom: 50px;
+  width: 128px;
+  display: flex;
+  gap: 5px;
+  padding: 10px;
+  border-radius: 13px 13px 13px 3px;
+  background: #f4f6fff0;
+  box-shadow: 0 3px 14px #000e411c;
+  color: #254997;
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.parent-bubble small {
+  display: block;
+  color: #344a77;
+  font-size: 8px;
+  margin-top: 3px;
+}
+
+.parent-bubble > svg {
+  color: #0055ff;
+  flex-shrink: 0;
+}
+
+.parent-balance-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  column-gap: 10px;
+  align-items: start;
+  position: relative;
+  z-index: 4;
+  background: #fffffff5;
+  margin-top: -14px;
+  border: 0;
+  border-radius: 22px;
+  padding: 14px;
+  box-shadow: 0 9px 23px #1a315808;
+}
+
+.balance-label {
+  grid-column: 1;
+  grid-row: 1;
+  align-items: flex-start;
+  color: #171b32;
+  font-size: 11px;
+  font-weight: 600;
+  min-height: 23px;
+}
+
+.balance-label .icon-button {
+  min-height: 24px;
+  width: 22px;
+  height: 24px;
+  color: #0055ff;
+}
+
+.parent-balance-card h2 {
+  grid-column: 1;
+  grid-row: 2;
+  font-size: 32px;
+  letter-spacing: -1px;
+  margin: 4px 0 12px;
+  white-space: nowrap;
+}
+
+.parent-balance-card h2 small {
+  font-size: 12px;
+  color: #11162b;
+  font-weight: 650;
+}
+
+.balance-actions {
+  grid-column: 1;
+  grid-row: 3;
+  gap: 5px;
+}
+
+.balance-actions .button {
+  min-height: 39px;
+  padding: 7px;
+  font-size: 10px;
+  background: #e9f0ff;
+  color: #0055ff;
+  box-shadow: none;
+}
+
+.freeze-button {
+  font-size: 0;
+  padding: 0;
+  width: 33px;
+  min-height: 39px;
+  flex-shrink: 0;
+  border: 0;
+  background: #eef3ff;
+  color: #0055ff;
+}
+
+.freeze-button.frozen {
+  background: #cfddff;
+}
+
+.monthly-progress {
+  grid-column: 2;
+  grid-row: 1 / 4;
+  background: #ffeaf3;
+  border: 0;
+  border-radius: 15px;
+  padding: 12px 10px 5px;
+  margin: 0;
+  min-height: 136px;
+}
+
+.monthly-progress > span {
+  display: block;
+  color: #ba2166;
+  font-size: 9px;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.monthly-progress strong {
+  color: #12162c;
+  display: block;
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+.monthly-progress strong small {
+  color: #63708f;
+  font-size: 8px;
+  font-weight: 450;
+}
+
+.monthly-progress .progress {
+  height: 8px;
+  background: #e5d8ec;
+}
+
+.monthly-progress .progress > span {
+  background: #ff4d96;
+}
+
+.monthly-progress button {
+  color: #a22c64;
+  font-size: 8px;
+  min-height: 30px;
+  line-height: 1.4;
+  margin-top: 6px;
+}
+
+.parent-shortcuts {
+  gap: 7px;
+  margin: 13px 0 18px;
+}
+
+.parent-shortcuts > button {
+  background: #ffffffde;
+  border-radius: 17px;
+  min-height: 81px;
+  padding: 10px 3px;
+  gap: 7px;
+  color: #11172f;
+  font-size: 9px;
+  font-weight: 600;
+  box-shadow: 0 4px 14px #1c315205;
+}
+
+.parent-shortcuts .icon-box {
+  width: 35px;
+  height: 33px;
+  border: 0;
+  background: none;
+  border-radius: 0;
+}
+
+.parent-shortcuts .icon-box svg {
+  width: 25px;
+  height: 25px;
+  stroke-width: 2;
+}

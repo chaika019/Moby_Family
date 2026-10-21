@@ -1,0 +1,29 @@
+{
+  "name": "moby-my-family",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "node scripts/generate-demo-qr.mjs && tsc -b && vite build && node scripts/build-preview.mjs",
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "node tests/domain.test.mjs && node tests/receipt.test.mjs && node tests/server-contract.test.mjs",
+    "test:e2e": "node node_modules/playwright/cli.js test"
+  },
+  "dependencies": {
+    "html5-qrcode": "^2.3.8",
+    "lucide-react": "^1.38.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^5.2.0",
+    "esbuild": "^0.28.2",
+    "playwright": "^1.62.1",
+    "qrcode": "^1.5.4",
+    "typescript": "^5.9.0",
+    "vite": "^7.3.6"
+  }
+}

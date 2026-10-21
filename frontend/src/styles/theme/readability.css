@@ -1,0 +1,63 @@
+/* Final typography layer: keep small labels readable at both phone widths. */
+:root { --moby-muted: #475569; }
+body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.row .row-copy strong, .row-copy > strong { font-size: 14px; line-height: 1.45; }
+.row .row-copy small, .row-copy > small, .tip small, .sheet-description,
+.form-note, .inline-note, .muted { font-size: 13px; line-height: 1.55; color: #475569; }
+.field, .field input, .field select, .field textarea { font-size: 16px; line-height: 1.5; }
+.app-header .greeting small { font-size: 12px; color: #e0eaff; }
+.balance-label, .card-tag, .small-button, .chore-bottom .small-button { font-size: 12px; }
+.chore-bottom small, .dream-copy > small, .mission-card small { font-size: 12px; line-height: 1.5; }
+.bottom-nav button { font-size: 12px; }
+.parent-balance-card h2 { font-size: 36px; line-height: 1.2; }
+.hero-balance h2 { font-size: 42px; line-height: 1.2; }
+[data-testid="parent-own-balance"] { font-size: 14px; line-height: 1.5; color: #334155; }
+.row-copy { min-width: 0; overflow-wrap: anywhere; }
+.avatar, .recipient .avatar { border-radius: 16px; box-shadow: 0 3px 10px #00297c18; }
+.mascot { image-rendering: auto; filter: drop-shadow(0 5px 10px #00297c24); }
+img { max-width: 100%; image-rendering: auto; }
+svg { shape-rendering: geometricPrecision; flex-shrink: 0; }
+@media (min-width: 701px) {
+  .row .row-copy strong, .row-copy > strong { font-size: 15px; }
+  .row .row-copy small, .row-copy > small, .form-note, .sheet-description { font-size: 14px; }
+  .intro p, .device-label, .demo-toolbar { font-size: 14px; line-height: 1.5; }
+}
+
+.parent-balance-card h2 small { font-size: 14px; }
+[data-testid="parent-own-balance"] { grid-column: 1 / -1; grid-row: 4; margin: 12px 0 0; }
+.balance-actions .button { font-size: 12px; min-height: 44px; }
+.security-intro p {
+  color: #fff;
+  background: #00297ce6;
+  border-radius: 12px;
+  padding: 8px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.device-label > span:last-child, .desktop-nav, .bank-label, .intro p { color: #475569; }
+.device-label > span:last-child { font-size: 12px; }
+.page-header small, .mascot-bubble { font-size: 11px; }
+.monthly-progress > span, .monthly-progress button { font-size: 12px; line-height: 1.5; }
+@media (max-width: 380px) {
+  .hero-balance h2 { font-size: 40px; }
+  .parent-balance-card h2 { font-size: 34px; }
+}
+@media (max-width: 700px) {
+  .workspace > main {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    min-height: 0;
+  }
+  .demo-toolbar {
+    height: auto;
+    flex: none;
+    padding: 6px 16px;
+    gap: 4px 12px;
+  }
+  .demo-toolbar .mode-label { width: 100%; }
+  .demo-toolbar button { color: #fff; }
+  .mobile-role { flex: none; }
+  .phones { flex: 1; min-height: 0; }
+  .device-column.mobile-active, .phone { height: 100%; }
+}

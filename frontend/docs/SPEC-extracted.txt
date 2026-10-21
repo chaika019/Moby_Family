@@ -1,0 +1,269 @@
+ПОЛНОЕ ПРОДУКТОВОЕ И ТЕХНИЧЕСКОЕ ТЗ: MOBY KIDS & FAMILY
+
+Версия v2.0 (AI-Ready Specification для генерации кода без уточняющих вопросов)Стек: Java 21 LTS (совместимо с Java 25), Spring Boot 4.x, Spring Data JPA, Spring Security, PostgreSQL, React + Vite
+
+1. Архитектурный стек и требования к среде (Java 21 vs Java 25)
+
+Компонент
+
+Техническая спецификация
+
+Зачем это нужно в проекте
+
+Java Version
+
+Java 21 LTS (базовый стандарт). Java 25 НЕ обязательна, но код полностью совместим. Использовать Virtual Threads (spring.threads.virtual.enabled=true), Java Records для всех DTO.
+
+Никаких проблем со сборкой в Docker и библиотеками кодогенерации (Lombok/MapStruct).
+
+Backend Framework
+
+Spring Boot 4.x (или актуальный 3.4.x при отсутствии 4.x в репозитории генератора), Spring Web, Spring Data JPA, Spring Security (JWT + RBAC), WebSocket (STOMP) или SSE для мгновенных пушей.
+
+Мгновенная синхронизация экранов Родителя и Ребенка в реальном времени.
+
+Database & Cache
+
+PostgreSQL 16 (основная БД), Liquibase / Flyway (миграции), H2 (допустимо как fallback для быстрого демо), Redis (опционально для QR-токенов).
+
+Строгая транзакционность (@Transactional) при переводах и оплате по QR.
+
+Frontend (Demo UI)
+
+React 18+, Vite, Tailwind CSS, Lucide Icons, Axios. Режим Split-Screen: на одном экране браузера 2 смартфона рядом (слева Moby Parent, справа Moby Junior).
+
+Идеальная демонстрация синхронных сценариев (QR-оплата, SOS на кассе, Задания).
+
+
+
+2. Полная матрица соответствия Разделу 4 ТЗ Хакатона (Core Product)
+
+Пункт ТЗ Хакатона
+
+Статус
+
+Детальная реализация в Moby Kids & Family
+
+4.1. Платежный инструмент и QR-оплата в реале
+
+Полностью закрыто (100%)
+
+Выпуск виртуальной и физической карты к выделенному субсчету родителя (7-13 лет, ст. 27 ГК РБ) или личному счету (14-17 лет, ст. 25 ГК РБ). НОВАЯ ФИЧА: Оплата чека по QR-коду на кассе (как ЕРИП/Оплати) прямо из Moby Junior с мгновенной проверкой MCC-лимитов и триггером «SOS на кассе» при нехватке средств.
+
+4.1. Карманные деньги и копилки
+
+Полностью закрыто (100%)
+
+Регулярные автопереводы по расписанию, Умные копилки («На велик»), «Баттл накоплений» (гонка прогресс-баров с другом/братом), Родительский матчинг (автодоплата родителя +X% к отложенным деньгам ребенка).
+
+4.1. Долгосрочный накопительный продукт
+
+Полностью закрыто (100%)
+
+Целевой семейный депозит «Капитал 18» (ст. 182 БК РБ — вклад на имя родителя в пользу ребенка до 18 лет). Поддержка 2 режимов: 1) Единоразовый взнос (например, 2000 BYN) с капитализацией; 2) Схема «500 BYN старт + 50 BYN/мес автосписание с зарплаты 1 или 2 родителей».
+
+4.1. Страхование ребенка
+
+Полностью закрыто (100%)
+
+Встроенный в подписку полис «Школьный щит 24/7» (травмы в школе и секциях, покрытие до 5000 BYN) + «Кибер-щит» (страховка от фишинга/скама в играх до 300 BYN) + микростраховка экрана смартфона и потери карты.
+
+4.1. Нефинансовые сервисы и Спецусловия
+
+Полностью закрыто (100%)
+
+Экстра-рассрочка по карте «Халва» (+2-3 мес на школьные товары и гаджеты), внутренняя микро-рассрочка для подростков 14-17 лет через Халву родителей, скидка 50% на семейные подписки.
+
+4.1. Управление родителем и Безопасность
+
+Полностью закрыто (100%)
+
+Умные MCC-тумблеры в 1 клик (блокировка игр/донатов, фастфуда, снятия наличных, 18+/гемблинга, ночных трат). «SOS на кассе» (вибро-пуш родителю на докидывание суммы за 3 сек). «Panic Ride» (вызов такси домой за счет родителя при 0 BYN). «Радар карты» (мягкая заморозка). Для 14-17 лет: Privacy Mode (родитель видит баланс, но чеки скрыты).
+
+4.1. Геймификация и ИИ-маскот
+
+Полностью закрыто (100%)
+
+Биржа домашних заданий (Chore-to-Earn) с холдированием BYN. Виртуальная валюта Moby Coins (не фиат!) за уроки финграмотности. ИИ-маскот помощник со скинами (Common-Legendary), кастомные звуки оплаты по QR, «Магазин родительских наград» (+1 час за ПК за коины).
+
+4.2. Критерии Win-Win и Юнит-экономика
+
+Полностью закрыто (100%)
+
+Подписка «Моя семья» (6.99 BYN/мес). Для семьи окупается за счет детского кешбэка 5-7% (возврат ~18 BYN/мес). Для банка: CAC = 15 BYN, доход с подписки + интерчейндж 1.5% + дешевые пассивы на счетах и вкладах «Капитал 18». Окупаемость (Payback) < 2 мес.
+
+4.3. Программа лояльности и Социалка
+
+Полностью закрыто (100%)
+
+Раздельное накопление: родителям — реальный манибэк в BYN и бонусы Халвы; детям — Moby Coins. Бытовая социалка: «Круговой буфет» (скинуться на чипсы/пиццу в 1 клик), шуточный мем-статус «Должник недели», режим «Секретный подарок родителям».
+
+
+
+3. Спецификация новых ключевых модулей: «Капитал 18» и «Оплата чека по QR»
+
+3.1. Долгосрочный накопительный продукт «Капитал 18» (Юридика РБ + Математика)
+
+Параметр вклада
+
+Точная логика работы (Для презентации и кода)
+
+Юридическая конструкция (БК РБ и ГК РБ)
+
+Оформляется как безотзывный вклад в BYN на имя родителя в пользу третьего лица — ребенка (ст. 182 Банковского кодекса РБ). Защищает деньги от нецелевого снятия подростком в 14–17 лет (в отличие от личного вклада по ст. 25 ГК РБ). Срок договора по стандарту МТБанка («МТБелки»): 37 месяцев с автоматической пролонгацией (Auto-Rollover) до даты 18-летия ребенка. Налог на доходы: 0% (освобождение от 13% подоходного налога по ст. 208 НК РБ для вкладов в BYN свыше 1 года).
+
+Вариант А: Единоразовый взнос («2 000 BYN на старте»)
+
+Родитель вносит стартовый капитал (например, 2 000 BYN) под 11.5% годовых с ежемесячной капитализацией. Так как по правилам безотзывных вкладов пополнение закрывается за 1–2 мес до конца срока, вклад работает автономно. За 10 лет (с 8 до 18 лет) с учетом сложного процента 2 000 BYN превращаются в ~5 930 BYN чистыми без единого доп. взноса.
+
+Вариант Б: Гибридный план («500 BYN старт + 50 BYN/мес с зарплаты 1 или 2 родителей»)
+
+Родитель открывает вклад от 500 BYN и включает «Family Auto-Invest»: настраивается автосписание с зарплатной карты одного родителя (50 BYN/мес) или сплит с двух родителей (например, мама 25 BYN + папа 25 BYN или 50+50 BYN). Архитектура обхода запрета пополнения: ежемесячные взносы падают на буферный накопительный субсчет с капитализацией и автоматически вливаются в основное тело вклада при каждой пролонгации. Итог за 10 лет (500 старт + 50/мес): вложено своих 6 500 BYN -> на выходе к 18 годам ~12 150 BYN.
+
+Семейный краудфандинг и Грант банка
+
+Генерация публичной ссылки/QR ЕРИП для бабушек и дедушек («Подарок на будущее» — только пополнение без права снятия). При пополнении без пропусков более 36 мес МТБанк начисляет бонусный грант +200 BYN в день 18-летия при переходе на взрослый пакет.
+
+
+
+3.2. Реал-лайф фича: Оплата чека по QR-коду на кассе (QR Checkout)
+
+Этап QR-оплаты
+
+Алгоритм для реализации в коде
+
+Сценарий использования в жизни
+
+У многих бюджетных детских смартфонов нет чипа NFC, либо Apple Pay не привязывается к детской карте. В магазинах РБ (Евроопт, Соседи, школьные буфеты, фудкорт) стоят QR-терминалы на кассе.
+
+Флоу успешной оплаты
+
+1. Ребенок жмет на главном экране Moby Junior кнопку «Сканировать QR на оплату».2. Наводит камеру на чек/терминал (в демо: выбирает пресет чека или сканирует картинку). В QR зашиты: merchantName, mccCode (например, 5411 — Супермаркет, 5814 — Фастфуд, 7994 — Игры), amount (BYN), items[].3. Бэкенд проверяет: а) Не заблокирован ли этот MCC тумблером родителя; б) Хватает ли дневного лимита и баланса.4. Если всё ОК: деньги списываются, проигрывается купленный за Moby Coins кастомный звук (например, монетка Mario), начисляется семейный кешбэк 5%, а родителю летит пуш с составом чека (если 7–13 лет) или просто суммой (если 14–17 лет, Privacy Mode).
+
+Флоу нехватки денег -> Триггер «SOS на кассе»
+
+Если сумма чека по QR = 8.00 BYN, а на балансе карты ребенка = 5.00 BYN:1. Оплата не отменяется намертво! Экран QR-оплаты переходит в режим ожидания и показывает: «Не хватает 3.00 BYN. Запросить у родителя за 5 секунд?».2. Ребенок жмет «SOS: Мам, добавь 3 BYN!».3. На экране родителя всплывает экстренное модальное окно с кнопкой «Добавить 3.00 BYN и оплатить чек».4. Родитель жмет «Да» -> бэкенд в одной транзакции переводит 3.00 BYN родителем ребенку и тут же проводит оплату QR-чека!
+
+
+
+4. Полная схема БД (PostgreSQL / JPA Entities) — Без двусмысленностей
+
+JPA Entity (Таблица)
+
+Поля и типы данных (Java / PostgreSQL)
+
+FamilyAccount
+
+id (UUID, PK), familyName (String), subscriptionActive (Boolean, default true), subscriptionFee (BigDecimal, default 6.99), parentMainBalance (BigDecimal, default 1500.00), cashbackAccumulated (BigDecimal, default 18.50), insuranceActive (Boolean, default true)
+
+ChildProfile
+
+id (UUID, PK), familyId (UUID, FK), firstName (String), age (Integer: 7..17), ageGroup (Enum: KIDS_7_13, TEEN_14_17), cardBalance (BigDecimal, default 45.00), mobyCoins (Integer, default 350), cardFrozen (Boolean, default false), privacyMode (Boolean: false для 7-13, true для 14-17), activeMascotSkin (String, default 'CYBER_FOX_DEFAULT'), activePaySound (String, default 'MARIO_COIN'), dailyLimit (BigDecimal, default 20.00), spentToday (BigDecimal, default 0.00)
+
+SpendingRule (MCC Filters)
+
+id (UUID, PK), childId (UUID, FK), categoryCode (Enum: GAMING_7994, FASTFOOD_5814, CASH_6011, ADULT_18_PLUS, NIGHT_SPEND), blocked (Boolean)
+
+TransactionRecord
+
+id (UUID, PK), childId (UUID, FK), merchantName (String), mccCategory (String), amount (BigDecimal), cashbackEarned (BigDecimal), paymentMethod (Enum: CARD_NFC, QR_CODE, P2P_SPLIT, SOS_TOPUP), secretGiftMode (Boolean, default false), receiptItemsJson (String), status (Enum: COMPLETED, DECLINED_MCC, DECLINED_LIMIT, PENDING_SOS), createdAt (Instant)
+
+SosCheckoutRequest
+
+id (UUID, PK), childId (UUID, FK), merchantName (String), totalQrAmount (BigDecimal), missingAmount (BigDecimal), status (Enum: PENDING, APPROVED, REJECTED), createdAt (Instant)
+
+ChoreTask (Задания)
+
+id (UUID, PK), childId (UUID, FK), title (String), rewardByn (BigDecimal), rewardCoins (Integer), status (Enum: ASSIGNED, SUBMITTED_FOR_REVIEW, COMPLETED), photoProofUrl (String)
+
+PiggyBank (Копилки и Баттлы)
+
+id (UUID, PK), childId (UUID, FK), title (String), targetAmount (BigDecimal), currentAmount (BigDecimal), parentMatchPercent (Integer, default 50), isBattle (Boolean), opponentName (String), opponentProgress (BigDecimal)
+
+LongTermDeposit («Капитал 18»)
+
+id (UUID, PK), childId (UUID, FK), planType (Enum: LUMP_SUM_2000, MONTHLY_500_PLUS_50), initialDeposit (BigDecimal), currentBalance (BigDecimal), monthlyAutoPayParent1 (BigDecimal), monthlyAutoPayParent2 (BigDecimal), interestRate (BigDecimal, default 11.5), maturityYear (Integer, default 2033), projectedFinalAmount (BigDecimal)
+
+SplitBill (Круговой буфет)
+
+id (UUID, PK), childId (UUID, FK), friendName (String), itemTitle (String), shareAmount (BigDecimal), isPaid (Boolean), debtorMemeBadge (String)
+
+RewardShopItem (Скины и Призы)
+
+id (UUID, PK), itemType (Enum: MASCOT_SKIN, CARD_SKIN, PAY_SOUND, PARENT_CUSTOM_PERK), title (String), costCoins (Integer), rarity (Enum: COMMON, RARE, EPIC, LEGENDARY), owned (Boolean)
+
+
+
+5. Контракт REST API (Spring Boot Controllers — Все пути и JSON)
+
+HTTP Метод и Endpoint
+
+Логика работы контроллера и сервиса
+
+GET /api/v1/family/state
+
+Возвращает полный слепок состояния семьи (FamilyStateResponse): баланс родителя, профиль ребенка, MCC-правила, активные SOS-запросы, копилки, вклад «Капитал 18», задания, транзакции и магазин скинов. Позволяет фронту обновлять оба экрана одним вызовом.
+
+POST /api/v1/onboarding/child
+
+Req: {firstName, age, birthCertScanBase64}. Создает профиль ребенка, открывает изолированный субсчет, генерирует одноразовый qrAuthToken для входа ребенка.
+
+POST /api/v1/qr-payment/scan
+
+Req: {childId, merchantName, mccCategory, amount, receiptItems[], secretGiftMode}. Проверяет карту на заморозку и MCC-блок. Если денег хватает -> списывает, начисляет кешбэк, возвращает status='COMPLETED'. Если не хватает -> автоматически создает SosCheckoutRequest на разницу и возвращает status='NEED_SOS_TOPUP', missingAmount.
+
+POST /api/v1/sos/{sosId}/approve
+
+Вызывается родителем в 1 клик. Переводит missingAmount со счета родителя на карту ребенка и автоматически завершает отложенную оплату QR-чека!
+
+PATCH /api/v1/parent/mcc-rules
+
+Req: {childId, categoryCode, blocked}. Переключает тумблеры лимитов (Игры, Фастфуд, Наличка, Ночь).
+
+POST /api/v1/parent/card-freeze
+
+Req: {childId, frozen}. Мгновенная заморозка / разморозка детской карты («Радар карты»).
+
+POST /api/v1/chores
+
+Req: {childId, title, rewardByn, rewardCoins}. Родитель создает задание, сумма rewardByn холдируется.
+
+POST /api/v1/chores/{id}/submit
+
+Ребенок отправляет задание на проверку (меняет статус на SUBMITTED_FOR_REVIEW).
+
+POST /api/v1/chores/{id}/approve
+
+Родитель подтверждает выполнение -> rewardByn падает на карту ребенка, rewardCoins в кошелек коинов.
+
+POST /api/v1/piggy/{id}/deposit
+
+Req: {amount}. Ребенок переводит деньги в копилку. Бэкенд автоматически добавляет сверху процент родительского матчинга (parentMatchPercent) со счета родителя!
+
+POST /api/v1/deposits/capital18/configure
+
+Req: {childId, planType: 'LUMP_SUM_2000' | 'MONTHLY_500_PLUS_50', initialAmount, parent1Monthly, parent2Monthly}. Открывает или обновляет долгосрочный вклад «Капитал 18» и возвращает расчет сложного процента до 18-летия.
+
+POST /api/v1/social/split-bill
+
+Req: {childId, friendName, itemTitle, shareAmount}. Создает запрос «Круговой буфет» однокласснику и вешает статус «Должник недели» до оплаты.
+
+POST /api/v1/safety/panic-ride
+
+Req: {childId}. Экстренный вызов такси домой (списывает 12.00 BYN напрямую со счета родителя в обход любых блокировок и 0 баланса ребенка).
+
+POST /api/v1/gamification/quiz-complete
+
+Req: {childId, quizId, score}. Начисляет +100 Moby Coins за прохождение урока финграмотности.
+
+POST /api/v1/gamification/shop/{itemId}/buy
+
+Покупка скина для ИИ-маскота, звука оплаты или награды от родителей («+1 час за ПК») за Moby Coins.
+
+
+
+6. Конфигурация и Системный промпт для Codex / Cursor / Claude Code
+
+Ниже приведен готовый файл правил (.cursorrules / AGENTS.md / Системный промпт). Положи его в корень проекта рядом с этим ТЗ и картинками референсов фронта — ИИ-генератор сгенерирует весь проект за один проход без вопросов.
+
+# SYSTEM INSTRUCTIONS FOR AI CODE GENERATOR (CODEX / CURSOR / GPT)## ROLE & BEHAVIORAct as an Autonomous Staff Full-Stack Engineer (Java + React).CRITICAL RULE: DO NOT ask clarifying questions. DO NOT leave TODO placeholders. Make deterministic decisions based on this specification and implement 100% working code immediately.## TECH STACK & VERSIONS1. Backend:   - Java 21 LTS (enable Virtual Threads: `spring.threads.virtual.enabled=true`). Use Java `record` for all DTOs.   - Spring Boot 4.x (or 3.4.x if 4.x maven BOM is unavailable in local cache).   - Spring Web, Spring Data JPA, PostgreSQL driver (plus H2 in-memory profile `demo` so the app runs out-of-the-box without external DB setup if needed).   - Lombok (optional, prefer pure Java records and clean getters/setters to avoid annotation processor issues).   - CORS: Allow `*` on `/api/**` so the Vite React frontend connects without errors.2. Frontend:   - React 18 + Vite + Tailwind CSS + `lucide-react` icons.   - Layout: SINGLE-PAGE SPLIT-SCREEN DEMO. Left half of viewport = Smartphone mockup "Moby (Родитель)". Right half of viewport = Smartphone mockup "Moby Junior (Ребенок)".   - Visual Reference: Check attached UI reference images in project folder (`./references/`). Match the clean white/blue MTBank Moby aesthetic for Parent and gamified vibrant cards/mascot UI for Child.## PRE-SEEDED DEMO DATA (CommandLineRunner)On startup, automatically seed the database with:- Parent Account: "Алексей (Родитель)", Balance: 1450.00 BYN, Subscription "Моя семья" = ACTIVE (6.99 BYN/mo), Accumulated Family Cashback = 24.50 BYN, Insurance "Школьный щит 24/7" = ACTIVE.- Child 1 (Active): "Никита", Age: 11 (KIDS_7_13), Balance: 45.00 BYN, Moby Coins: 450, Mascot Skin: "Кибер-Лис в шлеме", Pay Sound: "Монетка Mario".- MCC Rules for Никита: GAMING_7994 = BLOCKED, FASTFOOD_5814 = ALLOWED, CASH_6011 = BLOCKED, ADULT_18_PLUS = BLOCKED.- PiggyBank: "На новый велосипед", current: 120.00 BYN, target: 300.00 BYN, parentMatch: 50%, Battle Opponent: "Макс (Брат)" (progress: 95.00 BYN).- LongTermDeposit ("Капитал 18"): Plan = MONTHLY_500_PLUS_50, Initial = 500 BYN, Parent1 Monthly = 50 BYN, Parent2 Monthly = 50 BYN, Rate = 11.5%, Projected at 18yo = 18400 BYN.- Chores: 1) "Помыть посуду" (3 BYN + 50 Coins, status: SUBMITTED_FOR_REVIEW), 2) "Прочитать главу книги" (5 BYN + 80 Coins, status: ASSIGNED).- Preset QR Codes for 1-Click Demo Testing on Child Screen:  1) QR "Школьный буфет (Обед)" -> 4.50 BYN (MCC 5814) -> Succeeds immediately.  2) QR "Супермаркет Соседи (Чипсы и кола)" -> 52.00 BYN (MCC 5411) -> Exceeds 45.00 BYN balance -> Triggers "SOS на кассе" (missing 7.00 BYN) on Parent Screen!  3) QR "Донат Roblox (Robux Pack)" -> 15.00 BYN (MCC 7994) -> Blocked by Parent MCC Rule -> Triggers Mascot prompt to pass Financial Quiz.

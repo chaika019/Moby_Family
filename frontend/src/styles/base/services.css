@@ -1,0 +1,405 @@
+.history-summary {
+  background: #eef4ff;
+  border-radius: 17px;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+.history-summary>small {
+  font-size: 10px;
+  color: #8c9fc0;
+}
+
+.history-summary h3 {
+  font-size: 29px;
+  margin-top: 9px;
+  letter-spacing: -1px;
+}
+
+.history-summary h3 small {
+  font-size: 12px;
+  letter-spacing: 0;
+  color: #98a9c5;
+}
+
+.shop-wallet {
+  background: #fff7e2;
+  border: 1px solid #f2e8cb;
+  border-radius: 14px;
+  color: #ba974a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+}
+
+.shop-wallet strong {
+  font-size: 26px;
+  letter-spacing: -.8px;
+}
+
+.shop-wallet>span {
+  font-size: 10px;
+}
+
+.shop-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.shop-card {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  background: white;
+  border: 1px solid #e9edf6;
+  border-radius: 17px;
+  padding: 17px 14px;
+}
+
+.shop-card>span {
+  font-size: 48px;
+  width: 65px;
+  height: 65px;
+  display: grid;
+  place-items: center;
+  background: #f3f0fb;
+  border-radius: 17px;
+  flex-shrink: 0;
+}
+
+.shop-card strong {
+  font-size: 12px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.shop-card small {
+  font-size: 9px;
+  color: #a0abc0;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.shop-card .small-button {
+  font-size: 10px;
+  min-width: 80px;
+}
+
+.quiz .lesson-sheet-icon {
+  width: 73px;
+  height: 73px;
+  background: #e9efff;
+  border-radius: 25px;
+  display: grid;
+  place-items: center;
+  color: #5d8ada;
+  margin: 16px auto 24px;
+}
+
+.quiz>.eyebrow {
+  font-size: 7px;
+  justify-content: center;
+}
+
+.quiz h3 {
+  text-align: center;
+  font-size: 24px;
+  letter-spacing: -.7px;
+  margin: 13px 0;
+}
+
+.quiz p {
+  font-size: 11px;
+  line-height: 1.85;
+  color: #8c9db8;
+}
+
+.quiz h4 {
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 22px 0 14px;
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 21px;
+}
+
+.quiz-options button {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: white;
+  border: 1px solid #e5ebf5;
+  border-radius: 13px;
+  text-align: left;
+  font-size: 10px;
+  min-height: 49px;
+  color: #7187ab;
+}
+
+.quiz-options button>span {
+  background: #f0f4fa;
+  border-radius: 7px;
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  font-size: 9px;
+}
+
+.quiz-options button.selected {
+  border-color: #9fbff9;
+  background: #eff5ff;
+  color: #4379d7;
+}
+
+.quiz-options button>svg {
+  margin-left: auto;
+}
+
+.benefits-head {
+  text-align: center;
+  padding: 10px 0 25px;
+}
+
+.benefits-head>span {
+  font-size: 55px;
+}
+
+.benefits-head h3 {
+  font-size: 23px;
+  letter-spacing: -.8px;
+  margin: 17px 0 10px;
+}
+
+.benefits-head p {
+  font-size: 11px;
+  color: #9aa8bd;
+}
+
+.benefits-head b {
+  font-size: 25px;
+  display: block;
+  color: #4f7ccc;
+  margin-top: 17px;
+}
+
+.benefits-head b small {
+  font-size: 10px;
+  color: #9cacc6;
+}
+
+.center {
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: -.6px;
+  line-height: 1.5;
+}
+
+.capital-intro {
+  text-align: center;
+  padding: 12px 0 7px;
+}
+
+.capital-intro>span {
+  font-size: 61px;
+}
+
+.capital-intro h3 {
+  font-size: 24px;
+  letter-spacing: -.8px;
+  line-height: 1.25;
+  margin: 12px 0;
+}
+
+.capital-intro p {
+  font-size: 10px;
+  color: #9baac1;
+}
+
+.capital-projection {
+  border: 1px solid #dcebe2;
+  border-radius: 17px;
+  background: #edf7f0;
+  text-align: center;
+  padding: 21px;
+  color: #709783;
+  margin-top: 24px;
+}
+
+.capital-projection small {
+  font-size: 8px;
+  display: block;
+  letter-spacing: .5px;
+}
+
+.capital-projection strong {
+  font-size: 32px;
+  display: block;
+  letter-spacing: -.8px;
+  margin: 10px 0;
+  color: #467f5e;
+}
+
+.capital-projection strong span {
+  font-size: 13px;
+  letter-spacing: 0;
+}
+
+.capital-projection small:last-child {
+  font-size: 8px;
+  letter-spacing: 0;
+}
+
+.split-item {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #e9eef5;
+}
+
+.split-item>span {
+  flex: 1;
+}
+
+.split-item strong {
+  font-size: 11px;
+  display: block;
+  line-height: 1.5;
+}
+
+.split-item small {
+  display: block;
+  font-size: 9px;
+  color: #9babc3;
+  margin-top: 6px;
+}
+
+.virtual-card {
+  background: linear-gradient(130deg,#1556ce,#5079ed 65%,#a373e0);
+  border-radius: 20px;
+  padding: 23px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+  margin: 8px 0 20px;
+  box-shadow: 0 10px 20px #376bc51c;
+}
+
+.virtual-card:after {
+  content: "";
+  position: absolute;
+  right: -75px;
+  top: 50px;
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  border: 45px solid #ffffff0b;
+}
+
+.virtual-card .brand img {
+  width: 29px;
+  height: 29px;
+}
+
+.virtual-card .brand>span {
+  font-size: 21px;
+}
+
+.virtual-card .brand-suffix {
+  font-size: 6px;
+  color: #b5cdff;
+}
+
+.virtual-card>span {
+  float: right;
+  font-size: 8px;
+  color: #c3d5ff;
+  margin-top: 7px;
+  letter-spacing: 1px;
+}
+
+.virtual-card>svg {
+  display: block;
+  margin-top: 15px;
+  transform: rotate(90deg);
+  color: #b4ccff;
+}
+
+.virtual-card>strong {
+  display: block;
+  letter-spacing: 2px;
+  font-size: 15px;
+  margin: 14px 0;
+}
+
+.virtual-card>small {
+  font-size: 9px;
+  color: #becfff;
+  letter-spacing: 2px;
+}
+
+.virtual-card>b {
+  position: absolute;
+  right: 24px;
+  bottom: 22px;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.live-state {
+  padding: 14px;
+}
+
+.live-state p {
+  font-size: 11px;
+  line-height: 2;
+  color: #899bb7;
+}
+
+.help-copy p {
+  font-size: 10px;
+  color: #93a2bb;
+  line-height: 1.9;
+  margin: 20px 0;
+}
+
+.help-copy strong {
+  color: #617b9f;
+  font-size: 11px;
+}
+
+.space-skin {
+  background: linear-gradient(125deg,#362870,#7450ca 70%,#9a62d7);
+}
+
+.space-skin .hero-bottom {
+  background: #51318db3;
+}
+
+.space-skin .mascot {
+  filter: hue-rotate(10deg);
+}
+
+.space-skin:after {
+  content: '✧　✦　✧';
+  position: absolute;
+  top: 93px;
+  left: 17px;
+  color: #d7b9ff;
+  font-size: 13px;
+  letter-spacing: 5px;
+  pointer-events: none;
+  opacity: .6;
+}

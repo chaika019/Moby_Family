@@ -1,0 +1,130 @@
+/* Visual language derived from the three supplied Moby references. Live text, balances, controls and lesson states remain React components. */
+
+:root {
+  --moby-navy: #00297c;
+  --moby-deep: #001a58;
+  --moby-blue: #0055ff;
+  --moby-cyan: #00a5ff;
+  --moby-red: #ff344f;
+  --moby-orange: #ff7b31;
+  --moby-pink: #ff398a;
+  --moby-ink: #0d1025;
+  --moby-muted: #64718c;
+  --moby-surface: #f2f5f9;
+  --blue: var(--moby-blue);
+  color: var(--moby-ink);
+  background: #eaf0fa;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.workspace {
+  background: radial-gradient(ellipse at 76% 34%, #dce5ff 0, transparent 45%), #eff3fa;
+}
+
+.desktop-header {
+  border-color: #dce3f0;
+}
+
+.intro h1 {
+  color: var(--moby-ink);
+  font-weight: 800;
+}
+
+.intro h1 > span {
+  color: var(--moby-blue);
+}
+
+.intro p,
+.desktop-nav,
+.bank-label {
+  color: #64718c;
+}
+
+.device-label > span:last-child,
+.demo-toolbar {
+  color: #65738f;
+}
+
+.role-symbol.parent {
+  color: #0055ff;
+  background: #dde8ff;
+}
+
+.role-symbol.child {
+  color: #e82b78;
+  background: #ffe2ee;
+}
+
+.phone {
+  background: #151a28;
+  border-color: #09101e;
+  box-shadow: 0 25px 55px #06204c25, inset 0 0 0 2px #3e4655;
+}
+
+.phone-screen {
+  background: var(--moby-surface);
+}
+
+.statusbar {
+  background: var(--moby-navy);
+  color: white;
+  height: 43px;
+}
+
+.statusbar .dynamic-island {
+  background: #080d1c;
+}
+
+.screen-scroll {
+  padding: 0 18px 28px;
+  background: var(--moby-surface);
+}
+
+.screen-scroll.view-home {
+  background: radial-gradient(ellipse 390px 320px at 55% 40px,
+    #005bea 0,
+    #00297c 50%,
+    transparent 100%) 0 0 / 100% 365px no-repeat,
+
+    linear-gradient(to bottom,
+    #00297c 0,
+    #00297c 270px,
+    #dce5ff 350px,
+    #f2f5f9 410px);
+}
+
+.app-header {
+  padding: 15px 3px 12px;
+  color: white;
+  gap: 11px;
+}
+
+.app-header .greeting small {
+  color: #c0d4ff;
+  font-size: 10px;
+}
+
+.app-header .greeting strong {
+  color: white;
+  font-size: 17px;
+  letter-spacing: -.35px;
+}
+
+.app-header .avatar {
+  background: #ffffff16;
+  border: 1px solid #ffffff26;
+  color: white;
+  box-shadow: none;
+}
+
+.notification {
+  background: #ffffff0d;
+  color: white;
+  border-color: #ffffff24;
+  box-shadow: none;
+}
+
+.notification i {
+  background: var(--moby-red);
+  box-shadow: 0 0 0 2px #00349b;
+}

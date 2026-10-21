@@ -1,0 +1,244 @@
+.icon-box {
+  color: #0055ff;
+  background: #e6edff;
+}
+
+.icon-box.green {
+  color: #00aa74;
+  background: #e2f6ee;
+}
+
+.icon-box.purple {
+  color: #9d3aff;
+  background: #f0e5ff;
+}
+
+.icon-box.orange {
+  color: #ff8b1e;
+  background: #fff0df;
+}
+
+.icon-box.pink {
+  color: #ff3185;
+  background: #ffe5f1;
+}
+
+.surface {
+  border: 0;
+  border-radius: 19px;
+  background: #ffffffed;
+  box-shadow: 0 5px 18px #25365405;
+}
+
+.row {
+  min-height: 67px;
+  padding: 12px;
+  gap: 10px;
+}
+
+.row .row-copy strong {
+  color: #11172d;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.row .row-copy small,
+.row-copy > small {
+  color: #67748d;
+  font-size: 10px;
+}
+
+.row + .row {
+  border-color: #edf0f5;
+}
+
+.toggle.on::before {
+  background: #008bff;
+}
+
+.toggle::before {
+  background: #d7deeb;
+}
+
+.toggle > span {
+  box-shadow: 0 1px 4px #07336a20;
+}
+
+.page-header {
+  margin: 0 -18px;
+  padding: 23px 22px 20px;
+  background: radial-gradient(at 70% 10%, #0055ee, transparent 70%), #00297c;
+  color: white;
+}
+
+.page-header small {
+  color: #b7d1ff;
+}
+
+.page-header h1 {
+  color: white;
+  font-size: 27px;
+}
+
+.page-header .avatar {
+  border-color: #ffffff40;
+  background: #ffffff20;
+  color: white;
+}
+
+.screen-scroll.view-family,
+.screen-scroll.view-academy,
+.screen-scroll.view-more {
+  padding-top: 0;
+}
+
+.parent-phone .screen-scroll.view-family {
+  background: linear-gradient(#00297c 0 170px, #c2d5ff 250px, #f2f5f9 310px);
+}
+
+.security-intro {
+  position: relative;
+  isolation: isolate;
+  margin: 0 -18px 15px;
+  padding: 22px 22px 55px;
+  min-height: 213px;
+  text-align: left;
+  color: white;
+  overflow: hidden;
+}
+
+.security-intro::before {
+  bottom: -18px;
+  height: 100px;
+}
+
+.security-intro h2 {
+  color: white;
+  position: relative;
+  font-size: 23px;
+  max-width: 170px;
+  z-index: 4;
+}
+
+.security-intro p {
+  color: #d0e1ff;
+  position: relative;
+  max-width: 174px;
+  font-size: 11px;
+  line-height: 1.7;
+  z-index: 4;
+}
+
+.security-shield {
+  width: 37px;
+  height: 37px;
+  border-radius: 12px;
+  background: #ffffff20;
+  color: white;
+  margin: 0 0 13px;
+  position: relative;
+  z-index: 4;
+  box-shadow: none;
+}
+
+.security-shield svg {
+  width: 25px;
+  height: 25px;
+}
+
+.security-shield.frozen {
+  color: white;
+  background: #ffffff20;
+}
+
+.security-intro .mascot {
+  top: 3px;
+  right: -18px;
+  width: 227px;
+  height: 222px;
+  background-size: 365px auto;
+  background-position: -115px -140px;
+}
+
+.parent-phone .view-family > .section-title:first-of-type {
+  margin-top: 0;
+}
+
+.cashback-banner {
+  background: #e5f8f0;
+  border-color: #d2f1e3;
+  color: #008a58;
+}
+
+.cashback-art {
+  color: #00b478;
+}
+
+.cashback-banner small {
+  color: #247453;
+}
+
+.cashback-banner strong {
+  color: #055c3b;
+}
+
+.transaction > b {
+  color: #0c1328;
+  font-size: 12px;
+}
+
+.transaction > b.positive,
+.positive {
+  color: #00875a;
+}
+
+.transaction > b > small {
+  color: #67748d;
+  font-size: 9px;
+}
+
+.bottom-nav {
+  height: 70px;
+  margin: 0 8px 0;
+  border: 0;
+  border-radius: 26px;
+  background: #fff;
+  box-shadow: 0 6px 23px #19356d0b;
+  padding: 5px 0;
+}
+
+.bottom-nav > button {
+  color: #11162c;
+  font-size: 10px;
+  gap: 6px;
+}
+
+.bottom-nav > button > img {
+  width: 27px;
+  height: 27px;
+  border-radius: 6px;
+}
+
+.bottom-nav > button:not(.active) > img {
+  filter: grayscale(1) brightness(.2);
+  opacity: .85;
+}
+
+.bottom-nav .active {
+  color: #0055ff;
+}
+
+.bottom-nav .active::before {
+  display: none;
+}
+
+.home-indicator {
+  height: 22px;
+  background: #f2f5f9;
+}
+
+.home-indicator::after {
+  width: 105px;
+  height: 4px;
+  background: #50566c;
+}

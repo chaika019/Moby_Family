@@ -28,7 +28,7 @@
     </scm>
     <properties>
         <java.version>21</java.version>
-        <frontend.dist>${project.basedir}/../Moby_My_Family/dist</frontend.dist>
+        <frontend.dist>${project.basedir}/frontend/dist</frontend.dist>
     </properties>
     <dependencies>
         <dependency><groupId>org.springframework.boot</groupId><artifactId>spring-boot-starter-security</artifactId></dependency>

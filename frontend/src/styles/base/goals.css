@@ -1,0 +1,116 @@
+.dream-hero {
+  padding: 21px 19px;
+  background: linear-gradient(145deg,#fff9ed,#fff2e8);
+  border: 1px solid #f9e8d7;
+  border-radius: 24px;
+  text-align: center;
+}
+
+.dream-hero .eyebrow {
+  color: #c89c64;
+  justify-content: center;
+  font-size: 7px;
+}
+
+.bike-art {
+  position: relative;
+  font-size: 110px;
+  line-height: 1.4;
+  margin: 6px 0 2px;
+  filter: drop-shadow(0 10px 8px #be9f6d22);
+}
+
+.bike-art span,
+.bike-art i {
+  position: absolute;
+  font-style: normal;
+  font-size: 30px;
+  color: #ddb86e;
+  top: 30px;
+  right: 22px;
+}
+
+.bike-art i {
+  left: 15px;
+  right: auto;
+  top: 69px;
+  font-size: 24px;
+}
+
+.dream-hero h2 {
+  font-size: 20px;
+  letter-spacing: -.7px;
+}
+
+.dream-hero p {
+  font-size: 10px;
+  color: #b29e87;
+  margin-top: 8px;
+}
+
+.goal-numbers {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin: 23px 0 11px;
+}
+
+.goal-numbers b {
+  font-size: 25px;
+  letter-spacing: -.7px;
+}
+
+.goal-numbers b small {
+  font-size: 10px;
+  color: #a99a8b;
+  letter-spacing: 0;
+}
+
+.goal-numbers>span {
+  font-size: 9px;
+  color: #b6a28e;
+}
+
+.dream-hero .progress {
+  height: 7px;
+  background: #ecdfd3;
+}
+
+.dream-hero>.button {
+  margin-top: 20px;
+  width: 100%;
+  background: #f18e4b;
+  box-shadow: 0 4px 8px #ed935518;
+}
+
+.battle {
+  padding: 18px;
+}
+
+.battle>div:not(.progress) {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 14px 0 9px;
+}
+
+.battle>div:first-child {
+  margin-top: 0;
+}
+
+.battle strong {
+  font-size: 11px;
+  flex: 1;
+}
+
+.battle b {
+  font-size: 10px;
+  color: #9ba5b8;
+}
+
+.battle p {
+  font-size: 9px;
+  color: #a2acc0;
+  margin-top: 16px;
+  line-height: 1.7;
+}

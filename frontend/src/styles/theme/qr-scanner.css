@@ -1,0 +1,48 @@
+.qr-live-scanner { margin: 0 0 14px; }
+.qr-viewfinder {
+  position: relative;
+  width: min(100%, 284px);
+  height: 240px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 3px solid #5fa1ff;
+  border-radius: 22px;
+  background: #081b46;
+  box-shadow: 0 10px 24px #00297c33;
+}
+.qr-reader, .qr-reader video { width: 100%; height: 100%; object-fit: cover; }
+.qr-reader > div:first-child { border: 0 !important; }
+.qr-camera-placeholder {
+  position: absolute; inset: 0;
+  display: grid; place-items: center;
+  color: #dbeafe; pointer-events: none;
+}
+.qr-scan-line {
+  position: absolute; left: 12%; right: 12%; top: 18%; height: 2px;
+  background: #44ddff; box-shadow: 0 0 12px #44ddff;
+  pointer-events: none; animation: qr-scan 2.4s ease-in-out infinite alternate;
+}
+@keyframes qr-scan { to { top: 80%; } }
+@media (prefers-reduced-motion: reduce) {
+  .qr-scan-line { animation: none; top: 50%; }
+}
+.qr-camera-status { margin: 10px 0; color: #334155; text-align: center;
+  font-size: 13px; line-height: 1.5; }
+.qr-camera-help { display: flex; align-items: center; justify-content: center;
+  gap: 6px; color: #475569; font-size: 12px; margin: 8px 0; }
+.qr-demo-heading { font-size: 14px; font-weight: 750; margin: 18px 0 9px; }
+.qr-presets { display: grid; gap: 8px; }
+.qr-demo-row { display: flex; gap: 7px; min-width: 0; }
+.qr-demo-row > button { display: flex; align-items: center; gap: 10px; flex: 1;
+  min-width: 0; padding: 10px; border-radius: 14px; background: #f1f5ff;
+  color: #0d1025; text-align: left; }
+.qr-demo-row > button > span:nth-child(2) { display: grid; min-width: 0; }
+.qr-demo-row strong { font-size: 12px; line-height: 1.4; }
+.qr-demo-row small { font-size: 11px; color: #475569; }
+.qr-demo-row > a { display: grid; place-items: center; width: 44px; min-width: 44px;
+  border-radius: 14px; background: #e6eeff; color: #0055ff; font-weight: 750; }
+.qr-demo-row > button:disabled { opacity: .6; }
+@media (max-width: 380px) {
+  .qr-viewfinder { height: 215px; }
+  .qr-demo-row strong { font-size: 11px; }
+}

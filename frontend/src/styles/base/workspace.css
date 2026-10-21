@@ -1,0 +1,218 @@
+.workspace {
+  min-height: 100vh;
+  background: radial-gradient(ellipse at 80% 39%,
+    #e7edff88,
+    transparent 42%),
+    radial-gradient(ellipse at 10% 55%,
+    #e7eef988,
+    transparent 40%),
+    #f7f8fc;
+}
+
+.desktop-header {
+  height: 88px;
+  max-width: 1420px;
+  margin: auto;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e9ecf2;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.brand img {
+  width: 43px;
+  height: 43px;
+  border-radius: 13px;
+  box-shadow: 0 2px 8px #21395c08;
+}
+
+.brand>span {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  line-height: 1;
+}
+
+.brand-suffix {
+  display: block;
+  font-size: 10px;
+  font-weight: 550;
+  letter-spacing: 1.1px;
+  margin-top: 5px;
+  color: #758298;
+}
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  font-size: 12px;
+  color: #9199a9;
+}
+
+.desktop-nav .active {
+  color: #36425b;
+  font-weight: 600;
+}
+
+.bank-label {
+  font-size: 10px;
+  color: #8d96a7;
+  display: flex;
+  gap: 9px;
+  align-items: center;
+}
+
+.bank-label strong {
+  font-size: 18px;
+  letter-spacing: -.5px;
+  color: #263145;
+}
+
+.bank-mark {
+  color: #1b61f0;
+  margin-left: 4px;
+}
+
+.intro {
+  text-align: center;
+  padding: 38px 12px 26px;
+}
+
+.eyebrow {
+  font-size: 9px;
+  font-weight: 750;
+  letter-spacing: 1.55px;
+  color: #5477c0;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.intro .eyebrow {
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.eyebrow>span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #5284f3;
+}
+
+.intro h1 {
+  font-size: 35px;
+  font-weight: 720;
+  letter-spacing: -1.4px;
+  line-height: 1.3;
+  color: #1a2944;
+}
+
+.intro h1>span {
+  color: #2768f1;
+}
+
+.intro p {
+  font-size: 12px;
+  color: #8b93a4;
+  margin-top: 10px;
+}
+
+.mobile-break {
+  display: none;
+}
+
+.demo-toolbar {
+  max-width: 860px;
+  margin: 0 auto 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 10px;
+  color: #8e98aa;
+}
+
+.mode-label {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+
+.pulse {
+  width: 6px;
+  height: 6px;
+  background: #34b995;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px #34b99513;
+}
+
+.toolbar-divider {
+  width: 1px;
+  height: 11px;
+  background: #dce1ea;
+  margin: 0 5px;
+}
+
+.demo-toolbar button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 32px;
+  padding: 0 5px;
+  color: #8d96a6;
+}
+
+.phones {
+  display: flex;
+  gap: 58px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.device-column {
+  width: 393px;
+}
+
+.device-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.device-label strong {
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.device-label>span:last-child {
+  margin-left: auto;
+  font-size: 9px;
+  color: #9aa3b2;
+}
+
+.role-symbol {
+  width: 27px;
+  height: 27px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+}
+
+.role-symbol.parent {
+  background: #e7edf8;
+  color: #6b7eaa;
+}
+
+.role-symbol.child {
+  background: #ede7ff;
+  color: #9871dc;
+}
